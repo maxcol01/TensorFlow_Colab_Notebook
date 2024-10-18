@@ -27,8 +27,8 @@ def cast_into_dict(filename) -> list:
         for item in j:
             test_dico["line_number"] = counter
             test_dico["target"] = item[0]
-            test_dico["text"] = item[1].strip("\n")
-            test_dico["total_lines"] = length
+            test_dico["text"] = item[1].strip("\n").lower()
+            test_dico["total_lines"] = length-1
             list_dico.append(test_dico.copy())
             counter += 1
 
