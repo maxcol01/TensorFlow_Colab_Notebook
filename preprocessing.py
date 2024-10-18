@@ -1,4 +1,5 @@
-def get_files(filename) -> list:
+
+def get_files(filename: str) -> list:
     with open(filename, mode="r") as file:
         return file.readlines()
 
@@ -16,7 +17,7 @@ def cast_list_of_list(lst: list) -> list:
     return full_list
 
 
-def cast_into_dict(filename) -> list:
+def cast_into_dict(filename: str) -> list:
     text = get_files(filename)
     big_list = cast_list_of_list(text)
     list_dico = list()
